@@ -1,5 +1,7 @@
+const database = require("../services/database");
+
 const getAll = () => {
-  return [{ name: "John" }, { name: "Elon" }];
+  return database.sql("SELECT * FROM users");
 };
 
 module.exports = { getAll };
