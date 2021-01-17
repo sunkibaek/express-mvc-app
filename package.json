@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "DB_HOST=localhost node ./bin/www",
     "format": "prettier --write public routes",
     "test": "jest"
   },
@@ -17,5 +17,10 @@
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "supertest": "^6.1.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest.config.js"
+    ]
   }
 }
