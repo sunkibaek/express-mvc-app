@@ -1,3 +1,7 @@
-const getAll = () => [{ name: "John" }, { name: "Elon" }];
+const userRepository = require("../repositories/userRepository");
+
+const getAll = () => {
+  return userRepository.getAll();
+};
 
 module.exports = { getAll };
